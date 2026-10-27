@@ -1,0 +1,221 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f4f1ea;
+    font-family: Arial, sans-serif;
+    color: #2c2c2c;
+    line-height: 1.6;
+    padding-top: 80px; /* Компенсація висоти фіксованої шапки */
+    padding-bottom: 40px;
+}
+
+/* Фіксована шапка (Position Fixed) */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    z-index: 1000; /* Відображення поверх усього контенту */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.header-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #e8e2d5;
+}
+
+.nav a {
+    color: #e8e2d5;
+    margin-left: 15px;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.nav a:hover {
+    color: #d11a1a;
+    text-decoration: none;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Чергування фонів для секцій (Якість коду та естетика) */
+.card {
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    margin-bottom: 25px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.card:nth-child(odd) {
+    background-color: #ffffff;
+}
+
+.card:nth-child(even) {
+    background-color: #eae5d9;
+}
+
+#page-title {
+    color: #8b0000;
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.section-title {
+    color: #3a2e2b;
+    font-weight: bold;
+    border-bottom: 2px solid #8b0000;
+    padding-bottom: 5px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+h2.section-title {
+    font-size: 22px;
+}
+
+h3.section-title {
+    font-size: 18px;
+}
+
+/* Локальне позиціонування (Relative + Absolute) */
+.hero-card {
+    position: relative; /* Контекст позиціонування для .badge */
+    margin-bottom: 20px;
+}
+
+.badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: #8b0000;
+    color: #ffffff;
+    padding: 6px 14px;
+    font-size: 12px;
+    font-weight: bold;
+    border-radius: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+}
+
+.main-img {
+    max-width: 100%;
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border-radius: 6px;
+    border: 1px solid #dcdcdc;
+}
+
+.intro {
+    font-size: 18px;
+    font-style: italic;
+    background-color: #e8e2d5;
+    padding: 12px 15px;
+    border-radius: 6px;
+    margin-bottom: 15px;
+}
+
+strong {
+    color: #8b0000;
+}
+
+.highlight {
+    background-color: #ffe4b5;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+a {
+    color: #8b0000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #d11a1a;
+    text-decoration: underline;
+}
+
+ul, ol {
+    padding-left: 25px;
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ol {
+    list-style-type: decimal;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 15px 0 20px 0;
+}
+
+th, td {
+    padding: 10px 12px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background-color: #e8e2d5;
+    color: #3a2e2b;
+    font-weight: bold;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #fcfbf8;
+}
+
+/* Двовимірний макет (CSS Grid) */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 рівні колонки через fr */
+    gap: 20px; /* Рівномірні відступи */
+    margin-top: 15px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
